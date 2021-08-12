@@ -4,6 +4,23 @@ import { BASE_URL, API_KEY } from './constants/index';
 import axios from 'axios';
 
 function App() {
+
+const [apodData, setApodData] = useState({})//initial slice of state
+const [error, setError] = useState(null)
+
+useEffect(() => {
+  axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`)//external server request
+    .then(res => {
+      console.log(res)
+      setApodData(res.data);
+    })
+    .catch(err => {
+      console.error(error);
+      setError("Sorry, try again soon!");
+    })
+}, [])
+
+
   return (
     <div className="App">
       <p>
