@@ -1,12 +1,16 @@
 import React from 'react'
+import styled from 'styled-components'
+
+
+const StyledCopyright = styled.div`
+    color: ${(pr) => pr.theme.secondaryColor};
+    `
 
 function Copyright(props) {
-
-    
     return (
-        <div>
+        <StyledCopyright>
           <h2>Copyright: {props.copyright}</h2>
-        </div>
+        </StyledCopyright>
     )
 
 }
