@@ -4,6 +4,9 @@ import { BASE_URL, API_KEY } from './constants/index';
 import axios from 'axios';
 import Title from './Title'
 import ImageOfTheDay from './ImageOfTheDay'
+import Date from './Date'
+import Explanation from './explanation'
+import Copyright from './Copyright'
 
 function App() {
 
@@ -26,11 +29,11 @@ useEffect(() => {
   return (
     <div className="App">
       <p>
-        <Title title={apodData.title}/>
-        <ImageOfTheDay image={apodData.hdurl}/>
-        {/* <Date />
-        <Explanation />
-        <Copyright /> */}
+        <Title title={apodData.title} />
+        <ImageOfTheDay image={apodData.hdurl} />
+        <Date date={apodData.date} />
+        <Explanation explanation={apodData.explanation} />
+        <Copyright copyright={apodData.copyright} />
       </p>
     </div>
   );
