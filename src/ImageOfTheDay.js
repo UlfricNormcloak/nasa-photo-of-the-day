@@ -1,10 +1,15 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const StyledImage = styled.div`
+    margin: 20px 0 0 0;
+    `
 
 function ImageOfTheDay(props) {
     return (
-        <div>
+        <StyledImage>
             <img src={props.image} />
-        </div>
+        </StyledImage>
     )
 }
 

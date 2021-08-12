@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const StyledTitle = styled.div`
     background-color: ${(pr) => pr.theme.primaryColor};
-    color: ${(pr) => pr.theme.tertiaryColor}
+    color: ${(pr) => pr.theme.tertiaryColor};
     Padding: 10px;
     font-size: 48px;
     `
